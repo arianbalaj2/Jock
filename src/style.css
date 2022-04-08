@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow: hidden !important;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+background-color: rgb(45, 45, 78);    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    width: 700px;
+    height: 700px;
+    background-color: rgb(52, 147, 115);
+}
+.content {
+    width: 600px;
+    height: 400px;
+    background-color: rgb(221, 226, 226);
+
+}
+.content p{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center; */
+    margin-top:15%;
+    width: 100%;
+    height: 55%;
+    background-color: rgb(144, 143, 143);
+    padding: 15px;
+
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    transition: .8s  all ease ;
+}
+
+
+.btn{
+    width: 600px;
+    height: 100px;
+    background-color: rgb(69, 114, 114);
+    color: brown;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: blanchedalmond;
+}

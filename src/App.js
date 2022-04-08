@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import style from './style.css'
+import React, { useState } from 'react';
+import axios from 'axios';
 function App() {
+
+  const [jock,setJock]=useState("");
+
+const generateJock = ()=>{
+
+  axios
+  .get('https://api.chucknorris.io/jokes/random')
+  .then((rsp)=> setJock(rsp.data.value))
+  .catch((err)=> console.log(err));
+
+};
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+        <div className="content">
+          <p>{jock}</p>
+          
+        </div>
+        <div className="btn">
+          <button onClick={generateJock}>Click me</button>
+        </div>
+
     </div>
   );
 }
