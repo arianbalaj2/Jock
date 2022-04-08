@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 function App() {
 
-  const [jock,setJock]=useState("");
+  const [joke,setJoke]=useState("");
 
-const generateJock = ()=>{
+const generateJoke = ()=>{
 
   axios
   .get('https://api.chucknorris.io/jokes/random')
-  .then((rsp)=> setJock(rsp.data.value))
+  .then((rsp)=> setJoke(rsp.data.value))
   .catch((err)=> console.log(err));
 
 };
@@ -19,11 +19,11 @@ const generateJock = ()=>{
   return (
     <div className="container">
         <div className="content">
-          <p>{jock}</p>
+          <p>{joke}</p>
           
         </div>
         <div className="btn">
-          <button onClick={generateJock}>Click me</button>
+          <button onClick={generateJoke}>Click me</button>
         </div>
 
     </div>
